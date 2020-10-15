@@ -22,7 +22,8 @@ defmodule NotificationDispatcher.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:broadway, "~> 0.6"}
+      {:broadway, "~> 0.6"},
+      {:libcluster, "~> 3.2.1"}
     ]
   end
 end
