@@ -1,6 +1,6 @@
 import Config
 
-hostname = System.fetch_env!("HOSTNAME")
+hostname = System.get_env("HOSTNAME", "localhost")
 
 config :libcluster,
   topologies: [
