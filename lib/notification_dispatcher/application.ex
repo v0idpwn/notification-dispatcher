@@ -4,6 +4,11 @@ defmodule NotificationDispatcher.Application do
   use Application
 
   def start(_type, _opts) do
-    DynamicSupervisor.start_link(strategy: :one_for_one)
+    Supervisor.start_link(
+    [
+      {Cluster.Supervisor, [Application.fetch_env!(:libcluster, :topologies)]}
+    ],
+    strategy: :one_for_one
+    )
   end
 end
