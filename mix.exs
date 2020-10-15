@@ -22,8 +22,12 @@ defmodule NotificationDispatcher.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      # Data ingestion
       {:broadway, "~> 0.6"},
-      {:libcluster, "~> 3.2.1"}
+
+      # Clustering
+      {:libcluster, "~> 3.2.1"},
+      {:horde, "~> 0.8"}
     ]
   end
 end
